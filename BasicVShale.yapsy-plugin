@@ -1,0 +1,9 @@
+[Core]
+Name = Basic VShale
+Module = BasicVShale
+
+[Documentation]
+Author = Fernando Vizeu
+Version = 0.1.0
+Website = fvize.us
+Description = Calcular volume de folhelho usando equações básicas

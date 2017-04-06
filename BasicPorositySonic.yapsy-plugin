@@ -1,0 +1,9 @@
+[Core]
+Name = Basic Porosity Sonic
+Module = BasicPorositySonic
+
+[Documentation]
+Author = Fernando Vizeu
+Version = 0.1.0
+Website = fvize.us
+Description = Calcular porosidade usando perfil sônico

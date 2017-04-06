@@ -1,0 +1,9 @@
+[Core]
+Name = DT to Velocity conversion
+Module = DT2V
+
+[Documentation]
+Author = Fernando Vizeu
+Version = 0.1.0
+Website = fvize.us
+Description = Conversão de vagarosidade para velocidade

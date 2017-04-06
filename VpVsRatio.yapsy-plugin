@@ -1,0 +1,9 @@
+[Core]
+Name = Vp-Vs Ratio
+Module = VpVsRatio
+
+[Documentation]
+Author = Fernando Vizeu
+Version = 0.1.0
+Website = fvize.us
+Description = Cálculo da razão Vp-Vs
