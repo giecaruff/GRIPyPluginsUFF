@@ -56,7 +56,7 @@ class GeneralizedMeanPlugin(AutoGenDataPlugin):
 
     def run(self, uiparent):
         agd = AutoGenDialog(uiparent, self.inputdesc)
-        agd.SetTitle("Impedance Plugin")
+        agd.SetTitle("Generalized Mean Plugin")
 
         if agd.ShowModal() == wx.ID_OK:
             input = agd.get_input()

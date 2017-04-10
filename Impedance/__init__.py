@@ -5,7 +5,6 @@ from Plugins.Tools.AutoGenUI import AutoGenDialog
 from OM.Manager import ObjectManager
 import wx
 
-
 inputdesc = [{'type': 'omsingle', 'name': 'dt', 'tids': ['log'], 'dispname': u'Sônico'},
              {'type': 'bool', 'name': 'is_sonic', 'dispname': u"É sônico?", 'default': True},
              {'type': 'omsingle', 'name': 'rho', 'tids': ['log'], 'dispname': u"Densidade"},

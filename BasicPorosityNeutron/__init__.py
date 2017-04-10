@@ -45,7 +45,7 @@ class BasicPorosityNeutronPlugin(AutoGenDataPlugin):
 
     def run(self, uiparent):
         agd = AutoGenDialog(uiparent, self.inputdesc)
-        agd.SetTitle("Impedance Plugin")
+        agd.SetTitle("Basic Porosity Neutron Plugin")
 
         if agd.ShowModal() == wx.ID_OK:
             input = agd.get_input()

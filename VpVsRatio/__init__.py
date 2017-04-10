@@ -47,7 +47,7 @@ class VpVsRatioPlugin(AutoGenDataPlugin):
 
     def run(self, uiparent):
         agd = AutoGenDialog(uiparent, self.inputdesc)
-        agd.SetTitle("Impedance Plugin")
+        agd.SetTitle("Vp-Vs Ratio Plugin")
 
         if agd.ShowModal() == wx.ID_OK:
             input = agd.get_input()
