@@ -1,0 +1,9 @@
+[Core]
+Name = Basic Water Resistivity
+Module = BasicWaterResistivity
+
+[Documentation]
+Author = Fernando Vizeu
+Version = 0.1.0
+Website = fvize.us
+Description = Cálculo da resistividade da água a partir da temperatura e salinidade
