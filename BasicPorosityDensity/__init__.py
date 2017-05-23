@@ -7,12 +7,18 @@ import wx
 
 import numpy as np
 
+try:
+    from Plugins.Tools.AutoGenUI import _OMLogLikeInput
+    float_type = 'omloglike'
+except:
+    float_type = 'float'
+
 inputdesc = [{'type': 'omsingle', 'name': 'rhob', 'tids': ['log'], 'dispname': u'Densidade (RHOB)'},
-             {'type': 'float', 'name': 'rhoma', 'dispname': u"Densidade da matriz", 'default': 2.65},
-             {'type': 'float', 'name': 'rhofl', 'dispname': u"Densidade do fluido", 'default': 1.00},
+             {'type': float_type, 'name': 'rhoma', 'dispname': u"Densidade da matriz", 'default': 2.65},
+             {'type': float_type, 'name': 'rhofl', 'dispname': u"Densidade do fluido", 'default': 1.00},
              {'type': 'bool', 'name': 'usevsh', 'dispname': u"Corrigir para argila?", 'default': True},
              {'type': 'omsingle', 'name': 'vsh', 'tids': ['log'], 'dispname': u'Volume de argila (VSH)'},
-             {'type': 'float', 'name': 'rhosh', 'dispname': u"Densidade da argila", 'default': 2.60},
+             {'type': float_type, 'name': 'rhosh', 'dispname': u"Densidade da argila", 'default': 2.60},
              {'type': 'text', 'name': 'name', 'dispname': 'Nome'},
              {'type': 'text', 'name': 'unit', 'dispname': 'Unidade'}]
 

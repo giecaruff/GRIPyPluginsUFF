@@ -7,12 +7,18 @@ import wx
 
 import numpy as np
 
+try:
+    from Plugins.Tools.AutoGenUI import _OMLogLikeInput
+    float_type = 'omloglike'
+except:
+    float_type = 'float'
+
 inputdesc = [{'type': 'omsingle', 'name': 'dt', 'tids': ['log'], 'dispname': u'Sônico (DT)'},
-             {'type': 'float', 'name': 'dtma', 'dispname': u"Vagarosidade da matriz", 'default': 55.0},
-             {'type': 'float', 'name': 'dtfl', 'dispname': u"Vagarosidade do fluido", 'default': 188.0},
+             {'type': float_type, 'name': 'dtma', 'dispname': u"Vagarosidade da matriz", 'default': 55.0},
+             {'type': float_type, 'name': 'dtfl', 'dispname': u"Vagarosidade do fluido", 'default': 188.0},
              {'type': 'bool', 'name': 'usevsh', 'dispname': u"Corrigir para argila?", 'default': True},
              {'type': 'omsingle', 'name': 'vsh', 'tids': ['log'], 'dispname': u'Volume de argila (VSH)'},
-             {'type': 'float', 'name': 'dtsh', 'dispname': u"Vagarosidade da argila", 'default': 100.0},
+             {'type': float_type, 'name': 'dtsh', 'dispname': u"Vagarosidade da argila", 'default': 100.0},
              {'type': 'choice', 'name': 'method', 'dispname': u"Método", 'items': [u"Wyllie", u"Hunt-Raymer"], 'default': u"Wyllie"},
              {'type': 'text', 'name': 'name', 'dispname': 'Nome'},
              {'type': 'text', 'name': 'unit', 'dispname': 'Unidade'}]

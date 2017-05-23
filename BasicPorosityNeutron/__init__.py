@@ -7,9 +7,15 @@ import wx
 
 import numpy as np
 
+try:
+    from Plugins.Tools.AutoGenUI import _OMLogLikeInput
+    float_type = 'omloglike'
+except:
+    float_type = 'float'
+
 inputdesc = [{'type': 'omsingle', 'name': 'nphi', 'tids': ['log'], 'dispname': u'Nêutron (NPHI)'},
              {'type': 'omsingle', 'name': 'vsh', 'tids': ['log'], 'dispname': u'Volume de argila (VSH)'},
-             {'type': 'float', 'name': 'nphish', 'dispname': u"Leitura do Nêutron na argila", 'default': 0.3},
+             {'type': float_type, 'name': 'nphish', 'dispname': u"Leitura do Nêutron na argila", 'default': 0.3},
              {'type': 'text', 'name': 'name', 'dispname': 'Nome'},
              {'type': 'text', 'name': 'unit', 'dispname': 'Unidade'}]
 

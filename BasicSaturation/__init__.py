@@ -7,15 +7,21 @@ import wx
 
 import numpy as np
 
+try:
+    from Plugins.Tools.AutoGenUI import _OMLogLikeInput
+    float_type = 'omloglike'
+except:
+    float_type = 'float'
+
 inputdesc = [{'type': 'omsingle', 'name': 'rt', 'tids': ['log'], 'dispname': u'Resistividade profunda (RT)'},
              {'type': 'omsingle', 'name': 'phie', 'tids': ['log'], 'dispname': u'Porosidade efetiva (PHIE)'},
-             {'type': 'float', 'name': 'A', 'dispname': u"Coeficiente de tortuosidade (A)", 'default': 1.0},
-             {'type': 'float', 'name': 'M', 'dispname': u"Coeficiente de cimentação (m)", 'default': 2.0},
-             {'type': 'float', 'name': 'N', 'dispname': u"Coeficiente de saturação (n)", 'default': 2.0},
-             {'type': 'float', 'name': 'rw', 'dispname': u"Resistividade da água (RW)", 'default': 0.9},
+             {'type': float_type, 'name': 'A', 'dispname': u"Coeficiente de tortuosidade (A)", 'default': 1.0},
+             {'type': float_type, 'name': 'M', 'dispname': u"Coeficiente de cimentação (m)", 'default': 2.0},
+             {'type': float_type, 'name': 'N', 'dispname': u"Coeficiente de saturação (n)", 'default': 2.0},
+             {'type': float_type, 'name': 'rw', 'dispname': u"Resistividade da água (RW)", 'default': 0.9},
              {'type': 'choice', 'name': 'method', 'dispname': u"Método", 'items': [u"Archie", u"Simandoux"], 'default': u"Archie"},
              {'type': 'omsingle', 'name': 'vsh', 'tids': ['log'], 'dispname': u'Volume de argila (VSH)'},
-             {'type': 'float', 'name': 'rsh', 'dispname': u"Resistividade da argila (RSH)", 'default': 4.0},
+             {'type': float_type, 'name': 'rsh', 'dispname': u"Resistividade da argila (RSH)", 'default': 4.0},
              {'type': 'text', 'name': 'name', 'dispname': 'Nome'},
              {'type': 'text', 'name': 'unit', 'dispname': 'Unidade'}]
 

@@ -8,9 +8,15 @@ import wx
 import numpy as np
 from .Algo import calcgrlimits   
 
+try:
+    from Plugins.Tools.AutoGenUI import _OMLogLikeInput
+    float_type = 'omloglike'
+except:
+    float_type = 'float'
+
 inputdesc = [{'type': 'omsingle', 'name': 'gr', 'tids': ['log'], 'dispname': u'Raios gama (GR)'},
-             {'type': 'float', 'name': 'grmin', 'dispname': u"GRmin"},
-             {'type': 'float', 'name': 'grmax', 'dispname': u"GRmax"},
+             {'type': float_type, 'name': 'grmin', 'dispname': u"GRmin"},
+             {'type': float_type, 'name': 'grmax', 'dispname': u"GRmax"},
              {'type': 'bool', 'name': 'auto', 'dispname': u"Calcular automaticamente?", 'default': False},
              {'type': 'text', 'name': 'name', 'dispname': 'Nome'},
              {'type': 'text', 'name': 'unit', 'dispname': 'Unidade'}]
@@ -29,7 +35,7 @@ def job(**kwargs):
     if gr is None:
         return
     
-    if auto and None in (grmin, grmax):
+    if (not auto) and (None in (grmin, grmax)):
         return
     
     if auto:
